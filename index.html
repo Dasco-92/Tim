@@ -28,7 +28,6 @@
     <h1>Exemples de Diagrammes Mermaid</h1>
     
     <h2>Diagramme de flux</h2>
-    <p>Quis minim pariatur elit ex non sint nisi ullamco. Labore aute labore aliqua aute excepteur adipisicing enim commodo excepteur tempor commodo occaecat. Non do laborum et in velit irure sit consequat voluptate irure irure. Fugiat magna nisi ex eiusmod nisi proident do et. Do amet officia aliquip non consectetur exercitation aute proident. Incididunt esse nostrud nostrud consequat incididunt qui ex ad labore.</p>
     <div class="mermaid">
         graph TD;
         A[Début] --> B{Choix ?};
@@ -44,6 +43,68 @@
         A[Page d'accueil] -->|Lien| B[À propos];
         A -->|Lien| C[Services];
         A -->|Lien| D[Contact];
+    </div>
+    
+    <h2>Diagramme de Gantt</h2>
+    <div class="mermaid">
+        gantt
+        title Planification du projet
+        section Développement
+        Tâche 1 :a1, 2024-01-01, 10d
+        Tâche 2 :a2, after a1, 7d
+        
+        section Test
+        Tests unitaires :b1, after a2, 5d
+        Validation finale :b2, after b1, 3d
+    </div>
+    
+    <h2>Diagramme de Séquence</h2>
+    <div class="mermaid">
+        sequenceDiagram
+        participant Client
+        participant Serveur
+        Client->>Serveur: Demande d'information
+        Serveur-->>Client: Réponse avec les données
+    </div>
+    
+    <h2>Diagramme de Classe</h2>
+    <div class="mermaid">
+        classDiagram
+        Animal <|-- Mammifère
+        Mammifère <|-- Chien
+        Mammifère <|-- Chat
+        Chien : +aboyer()
+        Chat : +miauler()
+    </div>
+    
+    <h2>Diagramme d'État</h2>
+    <div class="mermaid">
+        stateDiagram-v2
+        [*] --> État1
+        État1 --> État2 : Événement 1
+        État2 --> [*] : Événement 2
+    </div>
+    
+    <h2>Diagramme en Arête de Poisson</h2>
+    <div class="mermaid">
+        fishbone
+        title Analyse des causes
+        A[Problème] --> B[Cause 1]
+        A --> C[Cause 2]
+        B --> D[Sous-cause 1]
+        B --> E[Sous-cause 2]
+        C --> F[Sous-cause 3]
+        C --> G[Sous-cause 4]
+    </div>
+
+    <h2>Diagramme de Matrice</h2>
+    <div class="mermaid">
+        pie
+        title Répartition des tâches
+        "Développement" : 40
+        "Test" : 30
+        "Documentation" : 20
+        "Réunion" : 10
     </div>
 </body>
 </html>
